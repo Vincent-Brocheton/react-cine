@@ -1,4 +1,4 @@
-function fakeData() {
+const fakeDataCinema = () => {
     return [
     {
         id: 0,
@@ -83,3 +83,5 @@ function fakeData() {
         ]
     }
 ]}
+
+export default fakeDataCinema;
