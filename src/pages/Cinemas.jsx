@@ -9,12 +9,12 @@ const Cinemas = () => {
 
     useEffect(() => {
         fetchCinema();
-    }, [])
+    }, []);
 
     const fetchCinema = () => {
         const cinemaList = fakeDataCinema();
         setCinema(cinemaList);
-    }
+    };
 
     return <>
         <h1>Les Cinémas</h1>
@@ -24,7 +24,6 @@ const Cinemas = () => {
                     <div className="card-body">
                         <h5 className="card-title">{cinema.name}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">{cinema.adresse} {cinema.codePostal} {cinema.ville}</h6>
-                        <p className="card-text">{cinema.ville}</p>
                         <Link to={"/cinema/" + cinema.id} className="btn btn-primary">Voir le cinéma</Link>
                     </div>
                 </div>
